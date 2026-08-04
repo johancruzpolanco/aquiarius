@@ -1,8 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-04 11:43
-   No edites este archivo: edita Cerveceria.html y regeneralo con
-     python minificar.py Cerveceria.html -s cerveceria-minificado.html
-     python construir-hibrido.py
-*/
+
 (function(){
 (function(){if(window.PACO_EN_FRAME)return;
  var btn=document.getElementById('hamburgerBtn');
