@@ -1,3 +1,11 @@
+/* Scripts del bundle, generado el 2026-08-05 12:44
+   No edites este archivo: edita Cerveceria.html y regeneralo con
+     python minificar.py Cerveceria.html -s cerveceria-minificado.html
+     python construir-hibrido.py
+*/
+/* Respaldo: si el HTML pegado en ShoWare todavia no trae esta
+   funcion, se define aqui para que los bloques de abajo no se caigan.
+   Si el HTML ya la trae, esta copia no se usa. */
 if (typeof window.pacoUrlPagina !== 'function') {
   window.pacoUrlPagina = function () {
     var u = (window.location.href || '').toLowerCase();
@@ -589,7 +597,47 @@ el.remove();});});}
 }
  document.documentElement.classList.toggle('paco-fin-rechazada',esMala);}catch(e){}
 }
-var PACO_FACT_MIN=190;var PACO_FACT_RESERVA=760;function pacoMedirMarco(doc){if(!doc)return 0;var b=doc.body,d=doc.documentElement;if(!b&&!d)return 0;return Math.max(
+var PACO_FACT_MIN=340;var PACO_FACT_RESERVA=900;var PACO_CSS_FACTURA=[
+'html,body{width:100%!important;max-width:none!important;min-width:0!important;',
+'margin:0!important;overflow-x:hidden!important;background:#fff!important}',
+'body{box-sizing:border-box!important;padding:22px 28px 26px!important;',
+'font-family:"Montserrat",Arial,Helvetica,sans-serif!important;',
+'font-size:15px!important;line-height:1.55!important;color:#16241d!important}',
+'#page-wrap,.content-wrap,.content-inner,.main-container,.main-content,',
+'.site-width,.center-div,.container,form,fieldset{width:100%!important;',
+'max-width:none!important;margin-left:0!important;margin-right:0!important;',
+'padding-left:0!important;padding-right:0!important;float:none!important}',
+'table{width:100%!important;max-width:none!important;table-layout:auto!important;',
+'border-collapse:collapse!important}',
+'td,th{padding:7px 10px!important;vertical-align:middle!important}',
+'img{max-width:100%!important;height:auto!important}',
+'label,td,th,span,p,div{font-size:15px!important;line-height:1.55!important}',
+'input[type=text],input[type=email],input[type=tel],input[type=number],',
+'input[type=search],input[type=password],input:not([type]),select,textarea{',
+'width:100%!important;max-width:100%!important;box-sizing:border-box!important;',
+'min-height:44px!important;font-size:15px!important;padding:10px 12px!important;',
+'border:1px solid #c3cec8!important;border-radius:8px!important;',
+'background:#fff!important;color:#16241d!important}',
+'textarea{min-height:110px!important}',
+'input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,',
+'input[type=number]:focus,select:focus,textarea:focus{',
+'border-color:#1ebe5d!important;outline:none!important;',
+'box-shadow:0 0 0 3px rgba(30,190,93,.16)!important}',
+'input[type=checkbox],input[type=radio]{width:auto!important;min-height:0!important;',
+'transform:scale(1.15)!important;margin-right:6px!important}',
+'input[type=submit],input[type=button],button,.button{width:auto!important;',
+'min-height:46px!important;padding:12px 26px!important;font-size:14px!important;',
+'font-weight:700!important;border-radius:9px!important;cursor:pointer!important}',
+'@media (max-width:760px){body{padding:16px 14px 20px!important}',
+'td,th{padding:5px 4px!important}}'
+].join('');function pacoEstilarMarco(doc){try{
+ if(!doc||doc.getElementById('paco-estilo-factura'))return;
+ var destino=doc.head||doc.getElementsByTagName('head')[0]||doc.body;if(!destino)return;
+ var st=doc.createElement('style');
+ st.id='paco-estilo-factura';
+ st.type='text/css';st.appendChild(doc.createTextNode(PACO_CSS_FACTURA));destino.appendChild(st);}catch(e){}
+}
+function pacoMedirMarco(doc){if(!doc)return 0;var b=doc.body,d=doc.documentElement;if(!b&&!d)return 0;return Math.max(
 b?b.scrollHeight:0,d?d.scrollHeight:0,b?b.offsetHeight:0,d?d.offsetHeight:0,d?d.getBoundingClientRect().height:0
 );}
 function pacoAjustarFactura(){
@@ -600,7 +648,7 @@ var doc=null;try{doc=f.contentDocument||(f.contentWindow&&f.contentWindow.docume
 if(!doc){
  f.setAttribute('data-paco-alto','reserva');
  f.style.setProperty('height',PACO_FACT_RESERVA +'px','important');return;}
-var alto=Math.ceil(pacoMedirMarco(doc));if(!alto)return;alto=Math.max(alto + 12,PACO_FACT_MIN);
+pacoEstilarMarco(doc);var alto=Math.ceil(pacoMedirMarco(doc));if(!alto)return;alto=Math.max(alto + 12,PACO_FACT_MIN);
  var actual=parseInt(f.getAttribute('data-paco-alto'),10)||0;if(Math.abs(actual - alto)<3)return;
  f.setAttribute('data-paco-alto',alto);
  f.style.setProperty('height',alto +'px','important');}
@@ -609,7 +657,7 @@ function pacoEngancharFactura(){
  document.querySelector('.embed-container iframe');
  if(!f||f.getAttribute('data-paco-enganchado'))return;
  f.setAttribute('data-paco-enganchado','1');
- f.addEventListener('load',function(){pacoAjustarFactura();setTimeout(pacoAjustarFactura,350);setTimeout(pacoAjustarFactura,1200);try{var doc=f.contentDocument;if(!doc||!window.ResizeObserver)return;var ro=new ResizeObserver(function(){pacoAjustarFactura();});if(doc.body)ro.observe(doc.body);if(doc.documentElement)ro.observe(doc.documentElement);
+ f.addEventListener('load',function(){pacoAjustarFactura();setTimeout(pacoAjustarFactura,350);setTimeout(pacoAjustarFactura,1200);try{var doc=f.contentDocument;if(!doc)return;pacoEstilarMarco(doc);if(!window.ResizeObserver)return;var ro=new ResizeObserver(function(){pacoAjustarFactura();});if(doc.body)ro.observe(doc.body);if(doc.documentElement)ro.observe(doc.documentElement);
  doc.addEventListener('input',pacoAjustarFactura,true);
  doc.addEventListener('change',pacoAjustarFactura,true);
  doc.addEventListener('click',function(){setTimeout(pacoAjustarFactura,250);},true);}catch(e){}
