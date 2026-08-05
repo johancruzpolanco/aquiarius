@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 16:11
+/* Scripts del bundle, generado el 2026-08-05 16:22
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -794,9 +794,28 @@ function pintar(){try{
  li.classList.toggle('paco-clic',hecho&&!!p.boton&&seVe(document.querySelector(p.boton)));}
 }catch(e){}
 }
-pintar();
- document.addEventListener('DOMContentLoaded',pintar);
- window.addEventListener('load',pintar);setInterval(pintar,500);})();
+var CAMPOS_TARJETA=[
+{id:'CardNumber',autocomplete:'cc-number',inputmode:'numeric',maxlength:23},
+{id:'cvv2',autocomplete:'cc-csc',inputmode:'numeric',maxlength:4},
+{id:'CardName',autocomplete:'cc-name'},
+{id:'monthExp',autocomplete:'cc-exp-month'},
+{id:'yearExp',autocomplete:'cc-exp-year'}
+];function arreglarTarjeta(){try{for(var i=0;i<CAMPOS_TARJETA.length;i++){var c=CAMPOS_TARJETA[i];var el=document.getElementById(c.id);if(!el)continue;
+ if(c.autocomplete&&el.getAttribute('autocomplete')!==c.autocomplete){
+ el.setAttribute('autocomplete',c.autocomplete);}
+ if(c.inputmode&&el.getAttribute('inputmode')!==c.inputmode){
+ el.setAttribute('inputmode',c.inputmode);}
+if(c.maxlength){
+ var actual=parseInt(el.getAttribute('maxlength'),10);if(!(actual>=c.maxlength)){
+ el.setAttribute('maxlength',String(c.maxlength));}
+}
+}
+}catch(e){}
+}
+function pasadaCheckout(){pintar();arreglarTarjeta();}
+pasadaCheckout();
+ document.addEventListener('DOMContentLoaded',pasadaCheckout);
+ window.addEventListener('load',pasadaCheckout);setInterval(pasadaCheckout,500);})();
 })();
 ;
 (function(){
