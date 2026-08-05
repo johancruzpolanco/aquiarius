@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 12:56
+/* Scripts del bundle, generado el 2026-08-05 13:06
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -640,7 +640,12 @@ var PACO_FACT_MIN=340;var PACO_FACT_RESERVA=900;var PACO_CSS_FACTURA=[
 }
 function pacoEnsancharCajaFactura(){try{
  var cont=document.querySelector('.embed-container');if(!cont)return;
- var caja=document.getElementById('paco-native-box-wrapper');var n=cont.parentElement,pasos=0;while(n&&n!==caja&&n!==document.body&&
+ var caja=document.getElementById('paco-native-box-wrapper');
+ var heading=cont.closest?cont.closest('h1,h2,h3,h4,h5,h6'):null;if(heading&&heading.parentNode){
+ var btns=document.querySelector('.checkout-finished-button-wrap');
+ var header=document.getElementById('checkout-finished-header');if(btns&&btns.parentNode){btns.parentNode.insertBefore(cont,btns);}else if(header&&header.parentNode){header.parentNode.insertBefore(cont,header.nextSibling);}else if(caja){caja.appendChild(cont);}
+}
+var n=cont.parentElement,pasos=0;while(n&&n!==caja&&n!==document.body&&
 n!==document.documentElement&&pasos++<15){
  n.style.setProperty('width','100%','important');
  n.style.setProperty('max-width','none','important');
