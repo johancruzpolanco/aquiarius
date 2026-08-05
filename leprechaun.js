@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 13:06
+/* Scripts del bundle, generado el 2026-08-05 13:09
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -657,9 +657,11 @@ n!==document.documentElement&&pasos++<15){
  n.style.setProperty('display','block','important');}
  n.style.setProperty('flex','1 1 100%','important');
  n.style.setProperty('grid-column','1 / -1','important');n=n.parentElement;}
- cont.style.setProperty('width','100%','important');
- cont.style.setProperty('max-width','none','important');
- cont.style.setProperty('flex','1 1 100%','important');
+ cont.style.setProperty('width','85%','important');
+ cont.style.setProperty('max-width','85%','important');
+ cont.style.setProperty('margin-left','auto','important');
+ cont.style.setProperty('margin-right','auto','important');
+ cont.style.setProperty('flex','0 1 85%','important');
  cont.style.setProperty('grid-column','1 / -1','important');if(!caja||cont.parentElement===caja)return;var anchoCaja=caja.clientWidth||0;if(!anchoCaja||cont.clientWidth>=anchoCaja*0.72)return;caja.appendChild(cont);}catch(e){}
 }
 function pacoMedirMarco(doc){if(!doc)return 0;var b=doc.body,d=doc.documentElement;if(!b&&!d)return 0;return Math.max(
