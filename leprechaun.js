@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 12:44
+/* Scripts del bundle, generado el 2026-08-05 12:56
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -599,6 +599,7 @@ el.remove();});});}
 }
 var PACO_FACT_MIN=340;var PACO_FACT_RESERVA=900;var PACO_CSS_FACTURA=[
 'html,body{width:100%!important;max-width:none!important;min-width:0!important;',
+'height:auto!important;min-height:0!important;',
 'margin:0!important;overflow-x:hidden!important;background:#fff!important}',
 'body{box-sizing:border-box!important;padding:22px 28px 26px!important;',
 'font-family:"Montserrat",Arial,Helvetica,sans-serif!important;',
@@ -637,6 +638,25 @@ var PACO_FACT_MIN=340;var PACO_FACT_RESERVA=900;var PACO_CSS_FACTURA=[
  st.id='paco-estilo-factura';
  st.type='text/css';st.appendChild(doc.createTextNode(PACO_CSS_FACTURA));destino.appendChild(st);}catch(e){}
 }
+function pacoEnsancharCajaFactura(){try{
+ var cont=document.querySelector('.embed-container');if(!cont)return;
+ var caja=document.getElementById('paco-native-box-wrapper');var n=cont.parentElement,pasos=0;while(n&&n!==caja&&n!==document.body&&
+n!==document.documentElement&&pasos++<15){
+ n.style.setProperty('width','100%','important');
+ n.style.setProperty('max-width','none','important');
+ n.style.setProperty('min-width','0','important');
+ n.style.setProperty('float','none','important');
+ n.style.setProperty('box-sizing','border-box','important');var t=n.tagName;
+ if(t==='TABLE'||t==='TBODY'||t==='TR'||
+ t==='TD'||t==='TH'){
+ n.style.setProperty('display','block','important');}
+ n.style.setProperty('flex','1 1 100%','important');
+ n.style.setProperty('grid-column','1 / -1','important');n=n.parentElement;}
+ cont.style.setProperty('width','100%','important');
+ cont.style.setProperty('max-width','none','important');
+ cont.style.setProperty('flex','1 1 100%','important');
+ cont.style.setProperty('grid-column','1 / -1','important');if(!caja||cont.parentElement===caja)return;var anchoCaja=caja.clientWidth||0;if(!anchoCaja||cont.clientWidth>=anchoCaja*0.72)return;caja.appendChild(cont);}catch(e){}
+}
 function pacoMedirMarco(doc){if(!doc)return 0;var b=doc.body,d=doc.documentElement;if(!b&&!d)return 0;return Math.max(
 b?b.scrollHeight:0,d?d.scrollHeight:0,b?b.offsetHeight:0,d?d.offsetHeight:0,d?d.getBoundingClientRect().height:0
 );}
@@ -644,7 +664,7 @@ function pacoAjustarFactura(){
  var f=document.getElementById('ifrmFactura')||
  document.querySelector('.embed-container iframe');if(!f)return;
  try{f.removeAttribute('height');}catch(e){}
-var doc=null;try{doc=f.contentDocument||(f.contentWindow&&f.contentWindow.document);}catch(e){doc=null;}
+pacoEnsancharCajaFactura();var doc=null;try{doc=f.contentDocument||(f.contentWindow&&f.contentWindow.document);}catch(e){doc=null;}
 if(!doc){
  f.setAttribute('data-paco-alto','reserva');
  f.style.setProperty('height',PACO_FACT_RESERVA +'px','important');return;}
@@ -668,7 +688,7 @@ function pacoPegarHeaderArriba(){try{
  h.style.setProperty('margin-top',(-desfase)+'px','important');}
 }catch(e){}
 }
-function pacoFinPasada(){pacoMarcarResultado();pacoEngancharFactura();pacoAjustarFactura();pacoPegarHeaderArriba();}
+function pacoFinPasada(){pacoMarcarResultado();pacoEngancharFactura();pacoEnsancharCajaFactura();pacoAjustarFactura();pacoPegarHeaderArriba();}
  document.addEventListener('DOMContentLoaded',pacoFinPasada);
  window.addEventListener('load',pacoFinPasada);
  window.addEventListener('resize',pacoPegarHeaderArriba);
