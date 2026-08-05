@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 17:13
+/* Scripts del bundle, generado el 2026-08-05 17:35
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -81,6 +81,8 @@ enforceColorScheme();setInterval(enforceColorScheme,1000);})();
  document.documentElement.classList.add('paco-pg-cuenta');}
  if(urlCheck.includes('myaccount.asp')){
  document.documentElement.classList.add('paco-pg-micuenta');}
+ if(urlCheck.includes('referenciacompra.asp')){
+ document.documentElement.classList.add('paco-pg-referencia');}
  var esEstandar=!(urlCheck.includes('eventperformances.asp')||
  urlCheck.includes('default.asp')||
  urlCheck.includes('basket.asp')||
