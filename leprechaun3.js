@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 16:22
+/* Scripts del bundle, generado el 2026-08-05 16:38
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -624,6 +624,529 @@ el.remove();});});}
 });}
  document.addEventListener('DOMContentLoaded',cleanupPage);
  window.addEventListener('load',cleanupPage);setTimeout(cleanupPage,100);setTimeout(cleanupPage,500);setTimeout(cleanupPage,1500);setTimeout(cleanupPage,2500);setTimeout(cleanupPage,4000);})();
+})();
+;
+(function(){
+(function(){
+ var css=`
+    html.paco-pg-bloqueo,
+    html.paco-pg-bloqueo body {
+        background-color: #001a10 !important;
+        background-image: url('https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/malla-original-2171x4096.png') !important;
+        background-repeat: repeat !important;
+        background-position: center top !important;
+        margin: 0 !important;
+    }
+
+    html.paco-pg-bloqueo .showare-nav-wrap,
+    html.paco-pg-bloqueo .showare-nav,
+    html.paco-pg-bloqueo .control-wrap,
+    html.paco-pg-bloqueo .ads-control,
+    html.paco-pg-bloqueo #utilityNav,
+    html.paco-pg-bloqueo .utility-nav,
+    html.paco-pg-bloqueo #TopMenu,
+    html.paco-pg-bloqueo #divTopMenu,
+    html.paco-pg-bloqueo #google_translate_element,
+    html.paco-pg-bloqueo .goog-te-gadget,
+    html.paco-pg-bloqueo .skiptranslate {
+        display: none !important;
+    }
+
+    /* La línea blanca de arriba viene del contenedor nativo
+       .content-inner.center-div.site-width (tiene border-top). Se quita
+       todo borde/fondo/línea de esos contenedores y sus pseudo-elementos. */
+    html.paco-pg-bloqueo .content-wrap,
+    html.paco-pg-bloqueo .content-inner,
+    html.paco-pg-bloqueo .center-div,
+    html.paco-pg-bloqueo .site-width,
+    html.paco-pg-bloqueo .main-container,
+    html.paco-pg-bloqueo .main-constrain-width,
+    html.paco-pg-bloqueo #page-wrap,
+    html.paco-pg-bloqueo .head-wrap,
+    html.paco-pg-bloqueo .foot-wrap,
+    html.paco-pg-bloqueo #EventInformationWrap {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        border-top: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    html.paco-pg-bloqueo .content-inner::before,
+    html.paco-pg-bloqueo .content-inner::after,
+    html.paco-pg-bloqueo .center-div::before,
+    html.paco-pg-bloqueo .center-div::after,
+    html.paco-pg-bloqueo .site-width::before,
+    html.paco-pg-bloqueo .site-width::after {
+        content: none !important;
+        border: none !important;
+        background: none !important;
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap hr,
+    html.paco-pg-bloqueo .access-denied-wrap hr {
+        display: none !important;
+    }
+
+    /* La línea blanca de arriba es un border-top (a veces box-shadow) que
+       ShoWare pinta en el contenedor nativo .content-inner.center-div.site-width
+       y/o en .main-container, con una regla de varias clases y !important.
+       Para ganarle SIEMPRE se duplica la clase de <html> (.paco-pg-bloqueo
+       dos veces): sube la especificidad de forma barata sin depender de
+       cuántas clases use la regla nativa. */
+    html.paco-pg-bloqueo.paco-pg-bloqueo .content-wrap,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .content-inner,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .content-inner.center-div.site-width,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .content-inner.center-div,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .content-inner.site-width,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .center-div.site-width,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .main-container,
+    html.paco-pg-bloqueo.paco-pg-bloqueo .main-container.main-container {
+        border: 0 !important;
+        border-top: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Y por si la línea viniera de un pseudo-elemento o de un <hr> nativo
+       entre el encabezado y el recuadro, se apagan también. */
+    html.paco-pg-bloqueo .content-wrap::before,
+    html.paco-pg-bloqueo .content-wrap::after,
+    html.paco-pg-bloqueo .main-container::before,
+    html.paco-pg-bloqueo .main-container::after,
+    html.paco-pg-bloqueo .access-denied-wrap::before,
+    html.paco-pg-bloqueo .access-denied-wrap::after {
+        content: none !important;
+        border: none !important;
+        background: none !important;
+    }
+
+    html.paco-pg-bloqueo hr {
+        display: none !important;
+    }
+
+    /* Si cae en accessdenied.asp (página estándar) el contenido viene
+       envuelto en la caja blanca; la volvemos transparente para que se
+       vean nuestras tarjetas. */
+    html.paco-pg-bloqueo .paco-native-box {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        max-width: 620px !important;
+        margin: 26px auto 80px !important;
+        padding: 0 22px !important;
+        min-height: 0 !important;
+    }
+
+    html.paco-pg-bloqueo .paco-native-box::after,
+    html.paco-pg-bloqueo .paco-native-box::before {
+        content: none !important;
+    }
+
+    /* ── Chip con los datos del evento (va encima del recuadro) ── */
+    html.paco-pg-bloqueo .access-denied-wrap {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 560px !important;
+        margin: 30px auto 14px !important;
+        padding: 0 !important;
+    }
+
+    html.paco-pg-bloqueo .access-denied-wrap .info-box {
+        position: relative !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 15px 20px 15px 56px !important;
+        border: 1px solid rgba(223, 186, 83, 0.28) !important;
+        border-radius: 16px !important;
+        background-color: #01150B !important;
+        background-image:
+            radial-gradient(130% 160% at 0% 0%, rgba(223, 186, 83, 0.13) 0%, rgba(223, 186, 83, 0) 55%),
+            linear-gradient(160deg, #06251a 0%, #01150B 72%) !important;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4) !important;
+        color: #cfd6d1 !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+
+    /* Icono de calendario a la izquierda del chip */
+    html.paco-pg-bloqueo .access-denied-wrap .info-box::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 15px !important;
+        left: 16px !important;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 9px !important;
+        border: 1px solid rgba(223, 186, 83, 0.45) !important;
+        background-color: rgba(223, 186, 83, 0.12) !important;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DFBA53' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 16px 16px !important;
+    }
+
+    html.paco-pg-bloqueo .access-denied-wrap .info-box .heading-text {
+        display: block !important;
+        margin: 0 0 6px !important;
+        color: #ffffff !important;
+        font-family: "OVERTURE", "Montserrat", sans-serif !important;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.4px !important;
+        line-height: 1.35 !important;
+        text-shadow: none !important;
+    }
+
+    html.paco-pg-bloqueo .access-denied-wrap .info-box a {
+        color: #DFBA53 !important;
+        text-decoration: none !important;
+        font-weight: 700 !important;
+        transition: color 0.2s ease !important;
+    }
+
+    html.paco-pg-bloqueo .access-denied-wrap .info-box a:hover {
+        color: #ffffff !important;
+        text-decoration: underline !important;
+    }
+
+    /* ── Tarjeta principal: formulario de contraseña ── */
+    html.paco-pg-bloqueo .access-restricted-wrap {
+        position: relative !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 560px !important;
+        margin: 0 auto 70px !important;
+        padding: 42px 36px 34px !important;
+        border: none !important;
+        border-radius: 22px !important;
+        background-color: #01150B !important;
+        background-image:
+            radial-gradient(120% 85% at 50% -15%, rgba(223, 186, 83, 0.16) 0%, rgba(223, 186, 83, 0) 58%),
+            linear-gradient(165deg, #06251a 0%, #01150B 66%, #010a06 100%) !important;
+        box-shadow:
+            0 26px 64px rgba(0, 0, 0, 0.6),
+            0 0 40px rgba(223, 186, 83, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+        color: #dfe4e0 !important;
+        font-family: "Montserrat", sans-serif !important;
+        overflow: hidden !important;
+        text-align: center !important;
+    }
+
+    /* @property deja animar el ángulo del gradiente cónico. Donde no se
+       soporte (Firefox viejo), el borde queda dorado tenue fijo: degrada bien. */
+    @property --paco-bloqueo-ang {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
+    /* Borde dorado EN MOVIMIENTO: un degradado cónico que gira, recortado
+       a la orilla con la máscara. Base dorada tenue + un brillo que viaja. */
+    html.paco-pg-bloqueo .access-restricted-wrap::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        border-radius: inherit !important;
+        padding: 1.6px !important;
+        background: conic-gradient(from var(--paco-bloqueo-ang),
+            rgba(223, 186, 83, 0.22) 0deg,
+            rgba(223, 186, 83, 0.22) 70deg,
+            #f7e29c 118deg,
+            #DFBA53 140deg,
+            rgba(223, 186, 83, 0.22) 188deg,
+            rgba(223, 186, 83, 0.22) 360deg) !important;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+        -webkit-mask-composite: xor !important;
+        mask-composite: exclude !important;
+        pointer-events: none !important;
+        animation: pacoBloqueoBorde 4.5s linear infinite !important;
+    }
+
+    @keyframes pacoBloqueoBorde {
+        to {
+            --paco-bloqueo-ang: 360deg;
+        }
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap form {
+        position: relative !important;
+        z-index: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Eyebrow de marca encima del encabezado */
+    html.paco-pg-bloqueo .access-restricted-wrap form::before {
+        content: "\x46estival \x50residente" !important;
+        display: block !important;
+        margin: 0 0 14px !important;
+        color: rgba(255, 255, 255, 0.45) !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 10px !important;
+        font-weight: 800 !important;
+        letter-spacing: 3.4px !important;
+        text-transform: uppercase !important;
+    }
+
+    /* Encabezado "Acceso restringido" con candado dorado */
+    html.paco-pg-bloqueo .accessdenied-headingtext {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 14px !important;
+        margin: 0 0 6px !important;
+        color: #DFBA53 !important;
+        font-family: "OVERTURE", "Montserrat", sans-serif !important;
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        letter-spacing: 2px !important;
+        line-height: 1.2 !important;
+        text-transform: uppercase !important;
+        text-shadow: none !important;
+    }
+
+    /* extractIcons() reconvierte el <img> de alerta en <svg>/<i>, así que
+       se oculta el icono nativo en cualquier forma (queda solo el candado). */
+    html.paco-pg-bloqueo .accessdenied-headingtext img,
+    html.paco-pg-bloqueo .accessdenied-headingtext svg,
+    html.paco-pg-bloqueo .accessdenied-headingtext i,
+    html.paco-pg-bloqueo .accessdenied-headingtext .sw-icon,
+    html.paco-pg-bloqueo .accessdenied-headingtext .sw-icon-alert {
+        display: none !important;
+    }
+
+    html.paco-pg-bloqueo .accessdenied-headingtext::before {
+        content: "" !important;
+        display: block !important;
+        width: 66px !important;
+        height: 66px !important;
+        border-radius: 50% !important;
+        border: none !important;
+        background-color: #DFBA53 !important;
+        background-image:
+            url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306251a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E"),
+            radial-gradient(circle at 32% 26%, #f7e29c 0%, #DFBA53 56%, #b8923a 100%) !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: center, center !important;
+        background-size: 30px 30px, cover !important;
+        box-shadow:
+            0 0 0 8px rgba(223, 186, 83, 0.1),
+            0 12px 28px rgba(0, 0, 0, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+        animation: pacoBloqueoLock 2.8s ease-in-out infinite !important;
+    }
+
+    @keyframes pacoBloqueoLock {
+        0%, 100% {
+            box-shadow:
+                0 0 0 8px rgba(223, 186, 83, 0.1),
+                0 12px 28px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+        50% {
+            box-shadow:
+                0 0 0 15px rgba(223, 186, 83, 0),
+                0 14px 32px rgba(223, 186, 83, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    /* Divisor corto bajo el título */
+    html.paco-pg-bloqueo .accessdenied-headingtext::after {
+        content: "" !important;
+        width: 54px !important;
+        height: 3px !important;
+        border-radius: 3px !important;
+        background: linear-gradient(90deg, rgba(223, 186, 83, 0) 0%, #DFBA53 50%, rgba(223, 186, 83, 0) 100%) !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html.paco-pg-bloqueo .access-restricted-wrap::after,
+        html.paco-pg-bloqueo .accessdenied-headingtext::before {
+            animation: none !important;
+        }
+    }
+
+    html.paco-pg-bloqueo .password-warning-description {
+        margin: 8px auto 22px !important;
+        max-width: 420px !important;
+        color: #a9b3ad !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+    }
+
+    html.paco-pg-bloqueo .password-warning-description b {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+    }
+
+    /* Campo de contraseña */
+    html.paco-pg-bloqueo .access-password-form-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        max-width: 360px !important;
+        margin: 0 auto 4px !important;
+        text-align: left !important;
+    }
+
+    html.paco-pg-bloqueo .labelfor-textinput {
+        color: #DFBA53 !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 10.5px !important;
+        font-weight: 800 !important;
+        letter-spacing: 1.2px !important;
+        text-transform: uppercase !important;
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap input.showare-text,
+    html.paco-pg-bloqueo .access-restricted-wrap input[type="text"],
+    html.paco-pg-bloqueo .access-restricted-wrap input[type="password"] {
+        display: block !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        height: 48px !important;
+        padding: 0 16px !important;
+        margin: 0 auto !important;
+        border-radius: 11px !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+        background: rgba(0, 0, 0, 0.45) !important;
+        background-image: none !important;
+        color: #ffffff !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        letter-spacing: 1px !important;
+        text-align: center !important;
+        box-shadow: none !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        -webkit-appearance: none;
+        appearance: none;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap input.showare-text::placeholder {
+        color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap input.showare-text:focus,
+    html.paco-pg-bloqueo .access-restricted-wrap input[type="text"]:focus {
+        border-color: #DFBA53 !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        box-shadow: 0 0 0 3.5px rgba(223, 186, 83, 0.16) !important;
+    }
+
+    /* El label espaciador transparente del layout nativo sobra aquí */
+    html.paco-pg-bloqueo .restrict-button-wrap .no-mobile {
+        display: none !important;
+    }
+
+    html.paco-pg-bloqueo .restrict-button-wrap {
+        margin-top: 22px !important;
+        text-align: center !important;
+    }
+
+    /* Botón "Continuar" */
+    html.paco-pg-bloqueo .access-restricted-wrap input.restrict-button-continue,
+    html.paco-pg-bloqueo .access-restricted-wrap .sw-button-primary,
+    html.paco-pg-bloqueo .access-restricted-wrap input[type="submit"] {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        min-height: 52px !important;
+        padding: 15px 30px !important;
+        margin: 0 auto !important;
+        border: none !important;
+        border-radius: 12px !important;
+        background-color: #1ebe5d !important;
+        background-image: linear-gradient(180deg, #29d46d 0%, #1ebe5d 100%) !important;
+        color: #ffffff !important;
+        font-family: "OVERTURE", "Montserrat", sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        letter-spacing: 1.6px !important;
+        line-height: 1.2 !important;
+        text-transform: uppercase !important;
+        text-align: center !important;
+        cursor: pointer !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 8px 22px rgba(30, 190, 93, 0.28) !important;
+        -webkit-appearance: none;
+        appearance: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.2s ease !important;
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap input.restrict-button-continue:hover,
+    html.paco-pg-bloqueo .access-restricted-wrap .sw-button-primary:hover,
+    html.paco-pg-bloqueo .access-restricted-wrap input[type="submit"]:hover {
+        background-image: linear-gradient(180deg, #35e07c 0%, #25d366 100%) !important;
+        box-shadow: 0 0 26px rgba(30, 190, 93, 0.5) !important;
+        transform: translateY(-2px) !important;
+    }
+
+    html.paco-pg-bloqueo .access-restricted-wrap input.restrict-button-continue:active,
+    html.paco-pg-bloqueo .access-restricted-wrap input[type="submit"]:active {
+        transform: translateY(0) !important;
+    }
+
+    /* Mensajes de error nativos (contraseña incorrecta) */
+    html.paco-pg-bloqueo .access-restricted-wrap .error-message,
+    html.paco-pg-bloqueo .access-restricted-wrap .sw-error {
+        display: block !important;
+        box-sizing: border-box !important;
+        max-width: 420px !important;
+        margin: 16px auto 0 !important;
+        padding: 10px 13px !important;
+        border: 1px solid rgba(255, 77, 77, 0.35) !important;
+        border-left: 3px solid #ff4d4d !important;
+        border-radius: 9px !important;
+        background: rgba(255, 77, 77, 0.08) !important;
+        color: #ff9b9b !important;
+        font-size: 12.5px !important;
+        line-height: 1.45 !important;
+    }
+
+    @media (max-width: 760px) {
+        html.paco-pg-bloqueo .access-restricted-wrap {
+            padding: 28px 20px 26px !important;
+            border-radius: 16px !important;
+        }
+
+        html.paco-pg-bloqueo .accessdenied-headingtext {
+            font-size: 19px !important;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html.paco-pg-bloqueo .access-restricted-wrap input.restrict-button-continue,
+        html.paco-pg-bloqueo .access-restricted-wrap input.showare-text {
+            transition: none !important;
+        }
+    }
+`;
+function poner(){var destino=document.head||document.documentElement;if(!destino)return false;
+ if(document.getElementById('paco-bloqueo-css'))return true;
+ var st=document.createElement('style');
+ st.id='paco-bloqueo-css';st.textContent=css;destino.appendChild(st);return true;}
+if(!poner()){
+ document.addEventListener('DOMContentLoaded',poner);}
+})();
 })();
 ;
 (function(){
