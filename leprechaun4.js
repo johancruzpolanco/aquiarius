@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-06 15:30
+/* Scripts del bundle, generado el 2026-08-06 15:37
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -746,6 +746,13 @@ el.remove();});});}
 (function(){if(window.PACO_EN_FRAME)return;
  if(window.location.href.toLowerCase().indexOf('patron_forgotpassword.asp')!==-1){
  document.documentElement.classList.add('paco-pg-recuperar');}
+})();
+})();
+;
+(function(){
+(function(){if(window.PACO_EN_FRAME)return;
+ if(window.location.href.toLowerCase().indexOf('changepassword.asp')!==-1){
+ document.documentElement.classList.add('paco-pg-clave');}
 })();
 })();
 ;
