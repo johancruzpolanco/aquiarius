@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 21:59
+/* Scripts del bundle, generado el 2026-08-06 14:55
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -197,7 +197,7 @@ window.PACO_POPUP={mostrarPopup:true,
  subtitulo:'Aplica 15% de descuento en tu compra. Solo tarjetas emitidas en República Dominicana.',
  porcentaje:'15%',
  etiqueta:'DESCUENTO BANCARIO',
- campoTitulo:'Ingresa tu código de descuento',
+ campoTitulo:'Ingresa los primeros 6 dígitos de tu tarjeta participante',
  campoPlaceholder:'Código o primeros 6 dígitos de tu tarjeta',
  campoBoton:'Habilitar descuento',longitudMax:0,pasos:[
 'Escribe tu código',
@@ -505,7 +505,7 @@ function renderCustomCart(){try{window.pacoNumRender=(window.pacoNumRender||0)+ 
 '</div>'+
 '</div>'+
 '<div class="paco-brsv-form">'+
-'<label class="paco-brsv-label" for="paco-coupon-input">'+(cfgP.campoTitulo||'Ingresa tu código de descuento')+'</label>'+
+'<label class="paco-brsv-label" for="paco-coupon-input">'+(cfgP.campoTitulo||'Ingresa los primeros 6 dígitos de tu tarjeta participante')+'</label>'+
 '<div class="paco-brsv-inputrow">'+
 '<input id="paco-coupon-input" class="paco-brsv-input" type="text" autocomplete="off" spellcheck="false"'+ maxAttr +
 ' placeholder="'+ pacoEsc(cfgP.campoPlaceholder||'Tu código')+'" value="'+ pacoEsc(draft)+'" aria-label="Código de descuento" style="background: rgba(0,0,0,0.45) !important; color: #ffffff !important;">'+
@@ -766,8 +766,13 @@ if(!detectar()){
 (function(){
 (function(){
  var css=`
-    html.paco-pg-bloqueo,
-    html.paco-pg-bloqueo body {
+    /* La clase se duplica (.paco-pg-bloqueo dos veces) para ganarle en
+       especificidad a la regla móvil de .paco-pg-otra, que en accessdenied.asp
+       convive en el mismo <html> y pone background-image:none — por eso el
+       fondo malla desaparecía SOLO en móvil (en escritorio esa regla otra
+       está tras un @media y no aplica). */
+    html.paco-pg-bloqueo.paco-pg-bloqueo,
+    html.paco-pg-bloqueo.paco-pg-bloqueo body {
         background-color: #001a10 !important;
         background-image: url('https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/malla-original-2171x4096.png') !important;
         background-repeat: repeat !important;
