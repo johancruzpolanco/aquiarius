@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-05 17:35
+/* Scripts del bundle, generado el 2026-08-05 21:59
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
