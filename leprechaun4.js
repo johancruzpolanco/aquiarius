@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-06 15:16
+/* Scripts del bundle, generado el 2026-08-06 15:30
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -1421,7 +1421,22 @@ function pacoPegarHeaderArriba(){try{
  h.style.setProperty('margin-top',(-desfase)+'px','important');}
 }catch(e){}
 }
-function pacoFinPasada(){pacoMarcarResultado();pacoEngancharFactura();pacoEnsancharCajaFactura();pacoAjustarFactura();pacoPegarHeaderArriba();}
+ var PACO_FIN_INICIO='https://\x66estival\x70residente.\x74uboleta.com.do/eventperformances.asp?evt=949';function pacoBotonInicio(){try{
+ var wraps=document.querySelectorAll('.checkout-finished-button-wrap');for(var w=0;w<wraps.length;w++){
+ var cands=wraps[w].querySelectorAll('a, input.button, input[type="button"], input[type="submit"], button');for(var i=0;i<cands.length;i++){var el=cands[i];
+ var txt=((el.textContent||'')+' '+(el.value||'')).toLowerCase();
+ if(txt.indexOf('regresar')===-1||txt.indexOf('principal')===-1)continue;
+ if(el.getAttribute('data-paco-inicio'))continue;
+ el.setAttribute('data-paco-inicio','1');
+ if(el.tagName==='A'){
+ el.setAttribute('href',PACO_FIN_INICIO);
+ el.removeAttribute('onclick');
+ el.removeAttribute('target');}
+ el.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.location.href=PACO_FIN_INICIO;},true);}
+}
+}catch(e){}
+}
+function pacoFinPasada(){pacoMarcarResultado();pacoEngancharFactura();pacoEnsancharCajaFactura();pacoAjustarFactura();pacoPegarHeaderArriba();pacoBotonInicio();}
  document.addEventListener('DOMContentLoaded',pacoFinPasada);
  window.addEventListener('load',pacoFinPasada);
  window.addEventListener('resize',pacoPegarHeaderArriba);
