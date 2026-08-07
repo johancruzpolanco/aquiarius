@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-06 15:37
+/* Scripts del bundle, generado el 2026-08-06 22:05
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -41,7 +41,7 @@ return u;};
 ;
 (function(){
 (function(){if(window.PACO_EN_FRAME)return;
- var faviconUrl="https://i.postimg.cc/NMVVBfZB/imagen.png";function enforceFavicon(){
+ var faviconUrl="https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/favicon.png";function enforceFavicon(){
  var existingIcons=document.querySelectorAll("link[rel*='icon'], link[rel='shortcut icon']");var hasOurIcon=false;existingIcons.forEach(function(icon){
  if(icon.href&&icon.href.indexOf('NMVVBfZB')!==-1){hasOurIcon=true;}else if(icon.parentNode){icon.parentNode.removeChild(icon);}
 });if(!hasOurIcon){
@@ -191,7 +191,7 @@ window.PACO_POPUP={mostrarPopup:true,
 };window.PACO_DESCUENTO={
  textoDetector:'scotiabank,scotia',
  textoTarjeta:'',
- logo:'https://i.postimg.cc/mk33SqCK/pngwing-com.png'
+ logo:'https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/logo-scotiabank.png'
 };window.PACO_PROMO={mostrar:true,
  titulo:'Descuento exclusivo para tarjetas Scotiabank',
  subtitulo:'Aplica 15% de descuento en tu compra. Solo tarjetas emitidas en República Dominicana.',
@@ -1460,9 +1460,9 @@ function pacoFinPasada(){pacoMarcarResultado();pacoEngancharFactura();pacoEnsanc
 ;
 (function(){
 window.PACO_CHECKOUT_LOGOS=[
-{nombre:'Visa',src:'https://i.postimg.cc/QC88C4g6/pngwing-com(2).png'},
+{nombre:'Visa',src:'https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/tarjeta-visa.png'},
 {nombre:'Mastercard',src:'https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png'},
-{nombre:'American Express',src:'https://i.postimg.cc/KcRsSrhH/pngwing-com(1).png'}
+{nombre:'American Express',src:'https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/tarjeta-american-express.png'}
 ];
 })();
 ;
