@@ -1,4 +1,4 @@
-/* Scripts del bundle, generado el 2026-08-06 22:05
+/* Scripts del bundle, generado el 2026-08-07 12:07
    No edites este archivo: edita Cerveceria.html y regeneralo con
      python minificar.py Cerveceria.html -s cerveceria-minificado.html
      python construir-hibrido.py
@@ -191,7 +191,8 @@ window.PACO_POPUP={mostrarPopup:true,
 };window.PACO_DESCUENTO={
  textoDetector:'scotiabank,scotia',
  textoTarjeta:'',
- logo:'https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/logo-scotiabank.png'
+ logo:'https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/scotiabank_logo.png',
+ tarjeta:'https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/scotiabank_tarjeta.png'
 };window.PACO_PROMO={mostrar:true,
  titulo:'Descuento exclusivo para tarjetas Scotiabank',
  subtitulo:'Aplica 15% de descuento en tu compra. Solo tarjetas emitidas en República Dominicana.',
@@ -440,8 +441,8 @@ function renderCustomCart(){try{window.pacoNumRender=(window.pacoNumRender||0)+ 
 }
 }
  var cardTxt=cfgD.textoTarjeta||nativeTxt||'Descuento Scotiabank aplicado';
- discountHTML='<div class="paco-banre-tag" style="background-color: rgba(204,34,41,0.18) !important; border-color: rgba(204,34,41,0.6) !important;">'+
-(cfgD.logo?'<span class="paco-banre-tag-logo" style="background: #ffffff !important;"><img src="'+ cfgD.logo +'" alt="Scotiabank"></span>':'')+
+ discountHTML='<div class="paco-banre-tag" style="background-color: rgba(234,31,40,0.18) !important; border-color: rgba(234,31,40,0.6) !important;">'+
+(cfgD.logo?'<span class="paco-banre-tag-logo"><img src="'+ cfgD.logo +'" alt="Scotiabank"></span>':'')+
 '<p class="paco-banre-tag-txt" style="color: #ffffff !important;">'+ pacoEsc(cardTxt)+'</p>'+
 '<span class="paco-banre-tag-check" style="color: #4ade80 !important;">&#10003; APLICADO</span>'+
 '</div>';}
@@ -470,6 +471,7 @@ function renderCustomCart(){try{window.pacoNumRender=(window.pacoNumRender||0)+ 
  var soloSiDetecta=(cfgP.mostrar==='auto');if(cfgP.mostrar&&(cfgP.forzar||infoD.campo)&&
 (!soloSiDetecta||cfgP.forzar||infoD.disponible)){
  var logoBrsv=(window.PACO_DESCUENTO&&window.PACO_DESCUENTO.logo)||'';
+ var tarjetaBrsv=(window.PACO_DESCUENTO&&window.PACO_DESCUENTO.tarjeta)||'';
  var codesHTML='';if(infoD.codigos.length){
  codesHTML='<div class="paco-brsv-codes">';for(var c=0;c<infoD.codigos.length;c++){
  codesHTML +='<span class="paco-brsv-code"><b>&#10003;</b> '+ pacoEsc(infoD.codigos[c])+
@@ -484,7 +486,7 @@ function renderCustomCart(){try{window.pacoNumRender=(window.pacoNumRender||0)+ 
  promoHTML='<div class="paco-brsv'+(infoD.aplicado?' paco-aplicado':'')+'">'+
 '<div class="paco-brsv-inner" style="background-color: #01150b !important;">'+
 '<div class="paco-brsv-head">'+
-(logoBrsv?'<div class="paco-brsv-mark" style="background: #ffffff !important;"><img src="'+ logoBrsv +'" alt="Scotiabank"></div>':'')+
+(logoBrsv?'<div class="paco-brsv-mark"><img src="'+ logoBrsv +'" alt="Scotiabank"></div>':'')+
 '<div class="paco-brsv-headtxt">'+
 '<span class="paco-brsv-eyebrow">'+(infoD.aplicado?'&#10003; DESCUENTO APLICADO':(cfgP.etiqueta||'DESCUENTO BANCARIO'))+'</span>'+
 '<h3 style="color: #ffffff !important;">'+(cfgP.titulo||'')+'</h3>'+
@@ -493,16 +495,9 @@ function renderCustomCart(){try{window.pacoNumRender=(window.pacoNumRender||0)+ 
 (cfgP.porcentaje?'<div class="paco-brsv-off" style="background-color: #DFBA53 !important; background-image: radial-gradient(circle at 32% 28%, #f7e29c 0%, #DFBA53 55%, #b8923a 100%) !important; color: #06251a !important;"><strong>'+ cfgP.porcentaje +'</strong><small>OFF</small></div>':'')+
 '</div>'+
 '<div class="paco-brsv-body">'+
-'<div class="paco-brsv-card" style="background-color: #a5171d !important; background-image: linear-gradient(135deg, #e5343c 0%, #b01c23 48%, #5c070b 100%) !important;">'+
-'<div class="paco-brsv-card-top">'+
-(logoBrsv?'<span class="paco-brsv-card-logo" style="background: #ffffff !important;"><img src="'+ logoBrsv +'" alt="Scotiabank"></span>':'')+
-'<span class="paco-brsv-slogan">Aquí estás mejor</span>'+
-'</div>'+
-'<div class="paco-brsv-chip" style="background-color: #DFBA53 !important;"></div>'+
-'<div class="paco-brsv-card-foot">'+
-'<span class="paco-brsv-dots" style="color: #ffffff !important;"><b>'+(draft?pacoEsc(pacoNormalizarCodigo(draft).substring(0,4)):'&bull;&bull;&bull;&bull;')+'</b>&nbsp;&bull;&bull;&bull;&bull;&nbsp;&bull;&bull;&bull;&bull;</span>'+
-'<span class="paco-brsv-mc"><i style="background: #eb001b !important;"></i><i style="background: #f79e1b !important;"></i></span>'+
-'</div>'+
+'<div class="paco-brsv-card">'+
+(tarjetaBrsv?'<img class="paco-brsv-cardimg" src="'+ tarjetaBrsv +'" alt="Tarjeta Scotiabank" loading="lazy">':'')+
+'<span class="paco-brsv-dots"><b>'+(draft?pacoEsc(pacoNormalizarCodigo(draft).substring(0,4)):'&bull;&bull;&bull;&bull;')+'</b>&nbsp;&bull;&bull;&bull;&bull;&nbsp;&bull;&bull;&bull;&bull;</span>'+
 '</div>'+
 '<div class="paco-brsv-form">'+
 '<label class="paco-brsv-label" for="paco-coupon-input">'+(cfgP.campoTitulo||'Ingresa los primeros 6 dígitos de tu tarjeta participante')+'</label>'+
@@ -1460,9 +1455,9 @@ function pacoFinPasada(){pacoMarcarResultado();pacoEngancharFactura();pacoEnsanc
 ;
 (function(){
 window.PACO_CHECKOUT_LOGOS=[
-{nombre:'Visa',src:'https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/tarjeta-visa.png'},
-{nombre:'Mastercard',src:'https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png'},
-{nombre:'American Express',src:'https://cdn.jsdelivr.net/gh/johancruzpolanco/aquiarius@main/imagenes/tarjeta-american-express.png'}
+{nombre:'Visa',marca:'visa',src:'https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/visa.jpg'},
+{nombre:'Mastercard',marca:'mastercard',src:'https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/mastercard.jpg'},
+{nombre:'American Express',marca:'amex',src:'https://\x66estival\x70residente.\x74uboleta.com.do/AdsUPLImage/amex.jpg'}
 ];
 })();
 ;
@@ -1478,7 +1473,9 @@ if(!elegido)elegido=huecos[0];var destino=elegido.parentElement||elegido;
  fila.className='paco-cc-logos';for(var j=0;j<lista.length;j++){var marca=lista[j]||{};if(!marca.src)continue;
  var nombre=marca.nombre||'';
  var item=document.createElement('span');
- item.className='paco-cc-item';
+ var slugMarca=(marca.marca||nombre||'')
+ .toString().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+ item.className='paco-cc-item'+(slugMarca?' paco-cc-item--'+ slugMarca:'');
  item.setAttribute('title',nombre);
  var img=document.createElement('img');
  img.className='paco-cc-logo';img.alt=nombre;
